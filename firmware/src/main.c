@@ -10,16 +10,13 @@
  */
 #include <xc.h>
 #include <stdint.h>
+#include "../include/blackbox_config.h"
 
 #pragma config OSC = HS, FCMEN = OFF, IESO = OFF
 #pragma config PWRT = ON, BOREN = ON, WDT = OFF
 #pragma config MCLRE = ON, LPT1OSC = OFF, PBADEN = OFF
 #pragma config STVREN = ON, LVP = OFF, XINST = OFF
 
-#define _XTAL_FREQ 20000000UL
-#define UART_BAUD 9600UL
-#define OVERSPEED_ADC 800u
-#define LOW_SIGNAL_ADC 80u
 
 static void uart_init(void)
 {
